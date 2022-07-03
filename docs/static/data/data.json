@@ -412,7 +412,7 @@
     ]
   },
   {
-    "name": "腾讯",
+    "name": "腾讯云",
     "url": "https://mirrors.cloud.tencent.com/",
     "tag_color": "#F17F42",
     "item": [
@@ -772,6 +772,46 @@
     ]
   },
   {
+    "name": "重庆邮电大学",
+    "url": "https://mirrors.cqupt.edu.cn/",
+    "item": [
+      "alpine",
+      "archlinux",
+      "archlinuxarm",
+      "archlinuxcn",
+      "centos",
+      "cdnjs",
+      "CTAN",
+      "debian",
+      "debian-cd",
+      "debian-multimedia",
+      "debian-security",
+      "deepin",
+      "deepin-cd",
+      "docker-ce",
+      "epel",
+      "fedora",
+      "fdroid",
+      "homebrew",
+      "kali",
+      "kali-images",
+      "kicad",
+      "manjaro",
+      "manjaro-cd",
+      "opensuse",
+      "openwrt",
+      "proxmox",
+      "pypi",
+      "raspbian",
+      "raspberrypi",
+      "termux",
+      "ubuntu",
+      "ubuntu-releases",
+      "UbuntuKylin",
+      "UbuntuKylin_cdimage"
+    ]
+  },
+  {
     "name": "上海交通大学",
     "url": "http://ftp.sjtu.edu.cn/",
     "item": [
@@ -905,7 +945,7 @@
     "item": ["PyPI"]
   },
   {
-    "name": "华为",
+    "name": "华为云",
     "url": "https://mirrors.huaweicloud.com/",
     "item": [
       "Maven",
