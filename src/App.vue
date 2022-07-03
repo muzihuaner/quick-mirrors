@@ -15,7 +15,7 @@
       </a-spin>
       <div class="footer">
         <h4>友情链接</h4>
-        <a href="https://quickso.cn/" target="_blank">快点搜</a> | <a href="https://cdn.quickso.cn/" target="_blank">QuickCDN</a>
+        <a href="https://quickso.cn/" target="_blank">快点搜</a> | <a href="https://cdn.quickso.cn/" target="_blank">QuickCDN</a> | <a href="https://mirrors.cernet.edu.cn/" target="_blank">校园网联合镜像站</a>
         <p>如果有开源镜像更新请
           <a href="https://github.com/muzihuaner/quick-mirrors/issues" target="_blank">告诉我们</a>，我们会及时更新！
         </p>
