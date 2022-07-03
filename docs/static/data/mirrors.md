@@ -2,6 +2,19 @@
 
 > 用于设置常用软件的国内镜像，以便加速下载资源。国内提供的[镜像站点](./)。
 
+## 测速
+
+系统软件源测速
+
+```bash
+curl -sSL https://cdn.jsdelivr.net/gh/lework/script/shell/os_repo_speed_test.sh | bash
+```
+
+Docker hub 测速
+
+```bash
+curl -sSL https://cdn.jsdelivr.net/gh/lework/script/shell/docker_hub_speed_test.sh | bash
+```
 
 ## centos
 
@@ -508,7 +521,7 @@ export HEX_CDN="https://hexpm.upyun.com"
 > 仅限访问和下载，请不要提交账号信息，需保护自己的隐私。
 
 ```
-https://gh.lework.workers.dev  # 对github clone、release、archive以及项目文件进行加速
+https://ghp.quickso.cn  # 对github clone、release、archive以及项目文件进行加速
 ```
 
 Release、Code(ZIP) 文件加速：
@@ -516,8 +529,6 @@ Release、Code(ZIP) 文件加速：
 https://gh.con.sh | 美国 01
 https://gh.api.99988866.xyz | 美国 02
 https://download.fastgit.org | 日本东京
-https://g.ioiox.com | 中国香港 （估计 10M 小水管，但稳定，不会动不动下载中断，算是备用
-https://git.yumenaka.net | 美国洛杉矶（晚上时比前面两个美国的更快
 ```
 Git Clone 加速：
 ```
@@ -527,17 +538,19 @@ https://github.com.cnpmjs.org | 新加坡
 ```
 Raw 文件加速：
 ```
-https://cdn.jsdelivr.net | 中国国内
+https://gcore.jsdelivr.net | 中国国内
 https://raw.fastgit.org | 中国香港
-https://git.yumenaka.net | 美国洛杉矶
 ```
 
 
 ## 前端开源项目 CDN
-
+- https://cdn.quickso.cn/
 - https://www.jsdelivr.com/
 - https://www.bootcdn.cn/
 - https://cdnjs.com/
 - http://www.staticfile.org/
 - http://jscdn.upai.com
 - https://cdn.baomitu.com/
+- https://cdnjs-jp.loli.net/
+- http://cdn.bytedance.com/
+- https://unpkg.com/
