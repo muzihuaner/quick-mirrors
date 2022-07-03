@@ -617,8 +617,8 @@
     ]
   },
   {
-    "name": "华中科技大学",
-    "url": "http://mirror.hust.edu.cn/",
+    "name": "平安云",
+    "url": "https://mirrors.pinganyun.com",
     "item": [
       "CPAN",
       "CTAN",
@@ -626,18 +626,16 @@
       "ArchLinux",
       "ArchLinuxARM",
       "CentOS",
-      "DebianCD",
+      "Debian",
+      "Debian-CD",
+      "Docker-ce",
       "EPEL",
+      "Fedora",
       "GNU",
-      "LinuxMint",
-      "RPMFusion",
+      "Gentoo",
+      "Kali",
       "Ubuntu",
-      "UbuntuReleases",
-      "Cygwin",
-      "SageMath",
-      "DeepinReleases",
-      "PackMan",
-      "Deepin"
+      "UbuntuReleases"
     ]
   },
   {
