@@ -3,7 +3,7 @@
     <div class="header">
       <div class="container">
         <span class="title"><a href="./">快点开源镜像站</a></span>
-        <span class="title-desc">开源软件的国内镜像站点</span>
+        <span class="title-desc">提供开源软件国内镜像搜索服务</span>
       </div>
     </div>
     <div class="main">
