@@ -77,7 +77,7 @@ export default {
     return {
       runDay: parseInt(
         (new Date().getTime() -
-          new Date(Date.parse("2020-01-21".replace(/-/g, "/"))).getTime()) /
+          new Date(Date.parse("2022-07-02".replace(/-/g, "/"))).getTime()) /
           1000 /
           3600 /
           24
