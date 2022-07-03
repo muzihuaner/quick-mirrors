@@ -14,18 +14,17 @@
         </div>
       </a-spin>
       <div class="footer">
+        <h4>友情链接</h4>
+        <a href="https://quickso.cn/" target="_blank">快点搜</a> | <a href="https://cdn.quickso.cn/" target="_blank">QuickCDN</a>
         <p>如果有开源镜像更新请
-          <a href="https://github.com/muzihuaner/quick-mirrors/issues" target="_blank"
-            >告诉我们</a
-          >，我们会及时更新！
+          <a href="https://github.com/muzihuaner/quick-mirrors/issues" target="_blank">告诉我们</a>，我们会及时更新！
         </p>
-        <span
-          >已稳定运行 <b>{{ runDay }}</b> 天！</span
-        ><br>
-     Copyright © 2016-2022 <a href="https://huangetech.github.io/" title="按下“Ctrl+D”试试？"><b>欢哥科技</b></a> All rights reserved.
+        <span>已稳定运行 <b>{{ runDay }}</b> 天！</span><br>
+        Copyright © 2016-2022 <a href="https://huangetech.github.io/" title="按下“Ctrl+D”试试？"><b>欢哥科技</b></a> All rights
+        reserved.
 
 
-            
+
       </div>
     </div>
   </div>
@@ -42,9 +41,9 @@ export default {
       runDay: parseInt(
         (new Date().getTime() -
           new Date(Date.parse("2022-07-02".replace(/-/g, "/"))).getTime()) /
-          1000 /
-          3600 /
-          24
+        1000 /
+        3600 /
+        24
       ),
       data: "",
       spinning: true
@@ -78,13 +77,16 @@ export default {
   line-height: 80px;
   background: #fff;
 }
+
 .container {
   height: 100%;
+
   @media screen {
     @media (min-width: @min-width) {
       width: 1140px;
     }
   }
+
   margin: 0 auto;
   padding: 0 10px;
   border-bottom: 1px solid #dcdfe6;
@@ -95,6 +97,7 @@ export default {
   font-size: 26px;
   font-weight: 500;
   font-family: "微软雅黑";
+
   @media screen {
     @media (max-width: @min-width) {
       padding-left: 5px;
@@ -106,6 +109,7 @@ export default {
   color: rgba(0, 0, 0, 0.45);
   margin-left: 10px;
   font-size: 14px;
+
   @media screen {
     @media (max-width: @min-width) {
       font-size: 12px;
@@ -115,11 +119,13 @@ export default {
 
 .main {
   position: relative;
+
   @media screen {
     @media (min-width: @min-width) {
       width: 1140px;
     }
   }
+
   height: -webkit-calc(100% - 80px);
   height: -moz-calc(100% - 80px);
   height: calc(100% - 80px);
@@ -133,6 +139,7 @@ export default {
   line-height: 32px;
   padding: 20px 0;
   color: rgba(0, 0, 0, 0.45);
+
   @media screen {
     @media (max-width: @min-width) {
       font-size: 12px;
