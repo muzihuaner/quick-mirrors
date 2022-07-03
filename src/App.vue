@@ -14,10 +14,10 @@
         </div>
       </a-spin>
       <div class="footer">
-        <p>
+        <p>如果有开源镜像更新请
           <a href="https://github.com/muzihuaner/quick-mirrors/issues" target="_blank"
             >告诉我们</a
-          >，我们可能会把它带给您！
+          >，我们会及时更新！
         </p>
         <span
           >已稳定运行 <b>{{ runDay }}</b> 天！</span
