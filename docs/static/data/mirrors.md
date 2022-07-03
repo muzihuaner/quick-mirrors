@@ -2,19 +2,6 @@
 
 > 用于设置常用软件的国内镜像，以便加速下载资源。国内提供的[镜像站点](./)。
 
-## 测速
-
-系统软件源测速
-
-```bash
-curl -sSL https://cdn.jsdelivr.net/gh/lework/script/shell/os_repo_speed_test.sh | bash
-```
-
-Docker hub 测速
-
-```bash
-curl -sSL https://cdn.jsdelivr.net/gh/lework/script/shell/docker_hub_speed_test.sh | bash
-```
 
 ## centos
 
