@@ -1,0 +1,461 @@
+<html><head><link rel="stylesheet" type="text/css" href="https://unpkg.com/vditor@3.8.15/dist/index.css"/>
+<script src="https://unpkg.com/vditor@3.8.15/dist/js/i18n/zh_CN.js"></script>
+<script src="https://unpkg.com/vditor@3.8.15/dist/method.min.js"></script></head>
+<body><div class="vditor-reset" id="preview"><h1>常见软件镜像设置</h1>
+<blockquote>
+  <p>用于设置常用软件的国内镜像，以便加速下载资源。国内提供的<a href="./">镜像站点</a>。</p>
+</blockquote>
+<h2>centos</h2>
+<p>```bash
+sed -e &#39;s!^#baseurl=!baseurl=!g&#39; \
+       -e  &#39;s!^mirrorlist=!#mirrorlist=!g&#39; \
+       -e &#39;s!mirror.centos.org!mirrors.ustc.edu.cn!g&#39; \
+       -i  /etc/yum.repos.d/CentOS-Base.repo</p>
+<p>yum install -y epel-release
+sed -e &#39;s!^mirrorlist=!#mirrorlist=!g&#39; \
+    -e &#39;s!^#baseurl=!baseurl=!g&#39; \
+    -e &#39;s!^metalink!#metalink!g&#39; \
+    -e &#39;s!//download.fedoraproject.org/pub!//mirrors.ustc.edu.cn!g&#39; \
+    -e &#39;s!http://mirrors.ustc!https://mirrors.ustc!g&#39; \
+    -i /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo
+```</p>
+<h2>debain</h2>
+<p><code>bash
+cp /etc/apt/sources.list{,-bak}
+cat &gt; /etc/apt/sources.list &lt;&lt;EOF
+deb http://mirrors.aliyun.com/debian/ stretch main
+deb-src http://mirrors.aliyun.com/debian/ stretch main
+deb http://mirrors.aliyun.com/debian/ stretch-updates main
+deb-src http://mirrors.aliyun.com/debian/ stretch-updates main
+deb http://mirrors.aliyun.com/debian-security stretch/updates main
+deb-src http://mirrors.aliyun.com/debian-security stretch/updates main
+EOF
+apt-get update
+</code></p>
+<p>也可以直接替换源</p>
+<p><code>bash
+sudo sed -e &#39;s/deb.debian.org/mirrors.163.com/g&#39; \
+  -e &#39;s#security.debian.org#mirrors.163.com/debian-security#g&#39; \
+  -i /etc/apt/sources.list
+</code></p>
+<h2>debian archive</h2>
+<p>debian 旧版本系统(2[hamm ]-7[wheezy])源都放在 debian-archive 中，</p>
+<p>```
+cp /etc/apt/sources.list{,-bak}
+cat &lt;&lt; EOF &gt; /etc/apt/sources.list
+deb <a href="http://mirrors.163.com/debian-archive/debian/">http://mirrors.163.com/debian-archive/debian/</a> wheezy main non-free contrib
+deb <a href="http://mirrors.163.com/debian-archive/debian/">http://mirrors.163.com/debian-archive/debian/</a> wheezy-backports main non-free contrib
+deb-src <a href="http://mirrors.163.com/debian-archive/debian/">http://mirrors.163.com/debian-archive/debian/</a> wheezy main non-free contrib
+deb-src <a href="http://mirrors.163.com/debian-archive/debian/">http://mirrors.163.com/debian-archive/debian/</a> wheezy-backports main non-free contrib
+deb <a href="http://mirrors.163.com/debian-archive/debian-security/">http://mirrors.163.com/debian-archive/debian-security/</a> wheezy/updates main non-free contrib
+deb-src <a href="http://mirrors.163.com/debian-archive/debian-security/">http://mirrors.163.com/debian-archive/debian-security/</a> wheezy/updates main non-free contrib
+EOF</p>
+<p>apt-get -o Acquire::Check-Valid-Until=false update
+```</p>
+<h2>ubuntu</h2>
+<p><code>bash
+sudo sed -i &#39;s/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g&#39; /etc/apt/sources.list
+</code></p>
+<h2>alpine</h2>
+<p><code>bash
+sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&#39; /etc/apk/repositories
+</code></p>
+<h2>freebsd</h2>
+<p>pkg 软件源</p>
+<p>```bash</p>
+<h1>/usr/local/etc/pkg/repos/FreeBSD.conf</h1>
+<p>FreeBSD: {
+  url: &#34;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&#34;,
+}</p>
+<p>pkg update -f
+```</p>
+<p>ports 软件源</p>
+<p>```bash</p>
+<h1>/etc/make.conf</h1>
+<p>MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+```</p>
+<h2>pip</h2>
+<ul>
+<li>阿里云 <a href="https://mirrors.aliyun.com/pypi/simple">https://mirrors.aliyun.com/pypi/simple</a></li>
+<li>中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple">https://pypi.mirrors.ustc.edu.cn/simple</a></li>
+<li>豆瓣(douban) <a href="http://pypi.douban.com/simple">http://pypi.douban.com/simple</a></li>
+<li>清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></li>
+<li>中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple">http://pypi.mirrors.ustc.edu.cn/simple</a></li>
+</ul>
+<p>使用 pip 的时候在后面加上-i 参数，指定 pip 的下载源</p>
+<p><code>bash
+pip install numpy -i https://mirrors.aliyun.com/pypi/simple
+</code></p>
+<p>上面命令每次运行需要指定网址，可进行永久修改：</p>
+<p><code>bash
+pip install pip -U
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
+</code></p>
+<p>windows 下: 在 user 目录中创建一个 pip 目录，如：<code>C:\Users（用户）\xx\pip</code>，新建文件 pip.ini，内容如下</p>
+<p><code>bash
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple
+</code></p>
+<p>linux 下: 修改 ~/.pip/pip.conf （如果没有自己创建一个）， 内容如下：</p>
+<p><code>bash
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple
+</code></p>
+<h2>easy_install</h2>
+<p><code>bash
+cat &gt;&gt; ~/.pydistutils.cfg  &lt;&lt;EOF
+[easy_install]
+index-url = https://mirrors.aliyun.com/pypi/simple
+EOF
+</code></p>
+<h2>ruby</h2>
+<p><code>bash
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+</code></p>
+<h2>npm</h2>
+<p><code>bash
+npm config set registry https://registry.npm.taobao.org
+npm config list
+</code></p>
+<h2>yarn</h2>
+<p><code>bash
+yarn config set registry https://registry.npm.taobao.org
+yarn config list
+</code></p>
+<h2>go</h2>
+<ul>
+<li><a href="https://mirrors.aliyun.com/goproxy/">https://mirrors.aliyun.com/goproxy/</a></li>
+<li><a href="https://goproxy.io">https://goproxy.io</a></li>
+<li><p><a href="https://gorpoxy.cn">https://gorpoxy.cn</a></p>
+<ol><li>使用 go1.11 以上版本并开启 go module 机制</li>
+<li>导出 GOPROXY 环境变量</li></ol></li>
+</ul>
+<p><code>bash
+export GO111MODULE=on
+export GOPROXY=https://mirrors.aliyun.com/goproxy/
+</code></p>
+<h2>jenkins</h2>
+<p>游览器访问 jenkins,例如: [http://localhost:8080/pluginManager/advanced]</p>
+<p>选择一个国内源: 
+- <a href="https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tencent/update-center.json">https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tencent/update-center.json</a>
+- <a href="https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/huawei/update-center.json">https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/huawei/update-center.json</a>
+- <a href="https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json">https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json</a>
+- <a href="https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/ustc/update-center.json">https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/ustc/update-center.json</a>
+- <a href="https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/bit/update-center.json">https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/bit/update-center.json</a></p>
+<h2>docker-ce</h2>
+<p><strong>CentOS/RHEL</strong></p>
+<p><code>bash
+curl -o /etc/yum.repos.d/docker-ce.repo https://mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo
+sed -i &#39;s#download.docker.com#mirrors.ustc.edu.cn/docker-ce#g&#39; /etc/yum.repos.d/docker-ce.repo
+</code></p>
+<p><strong>Debian</strong></p>
+<p><code>bash
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   &#34;deb [arch=amd64] http://mirrors.ustc.edu.cn/docker-ce/linux/debian \
+   $(lsb_release -cs) \
+   stable&#34;
+sudo apt-get update
+sudo apt-get install docker-ce
+</code></p>
+<p><strong>Ubuntu</strong></p>
+<p><code>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   &#34;deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable&#34;
+sudo apt-get update
+sudo apt-get install docker-ce
+</code></p>
+<h2>docker</h2>
+<p><strong>docker 客户端</strong></p>
+<blockquote>
+  <p>指定<code>registry-mirrors</code></p>
+</blockquote>
+<ul>
+<li>azure <a href="http://dockerhub.azk8s.cn">http://dockerhub.azk8s.cn</a> (内部使用)</li>
+<li>tencent <a href="https://mirror.ccs.tencentyun.com">https://mirror.ccs.tencentyun.com</a> (内部使用)</li>
+<li>netease <a href="http://hub-mirror.c.163.com">http://hub-mirror.c.163.com</a></li>
+<li>aliyun <a href="https://2h3po24q.mirror.aliyuncs.com">https://2h3po24q.mirror.aliyuncs.com</a></li>
+</ul>
+<p><code>bash
+cp  /etc/docker/daemon.json{,-bak}
+cat &gt; /etc/docker/daemon.json &lt;&lt;EOF
+{
+    &#34;log-driver&#34;: &#34;json-file&#34;,
+    &#34;log-opts&#34;: {
+        &#34;max-size&#34;: &#34;100m&#34;,
+        &#34;max-file&#34;: &#34;3&#34;
+    },
+    &#34;live-restore&#34;: true,
+    &#34;max-concurrent-downloads&#34;: 10,
+    &#34;max-concurrent-uploads&#34;: 10,
+    &#34;storage-driver&#34;: &#34;overlay2&#34;,
+    &#34;storage-opts&#34;: [
+        &#34;overlay2.override_kernel_check=true&#34;
+    ],
+    &#34;exec-opts&#34;: [&#34;native.cgroupdriver=systemd&#34;],
+    &#34;registry-mirrors&#34;: [
+        &#34;http://hub-mirror.c.163.com&#34;
+    ]
+}
+EOF
+</code></p>
+<p>可以通过脚本进行测速在选择镜像站点</p>
+<p><code>bash
+curl -sSL https://git.io/dspeed | bash
+</code></p>
+<p><strong>docker.io 镜像加速</strong></p>
+<blockquote>
+  <p>dockerhub.azk8s.cn 只能内部使用了</p>
+</blockquote>
+<p><code>bash
+docker pull dockerhub.azk8s.cn/library/centos
+</code></p>
+<p><strong>gcr.io 镜像加速</strong></p>
+<blockquote>
+  <p>gcr.azk8s.cn 只能内部使用了</p>
+</blockquote>
+<p><code>bash
+docker pull gcr.azk8s.cn/google_containers/kube-apiserver:v1.16.3
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.16.3
+</code></p>
+<p><strong>quay.io 镜像加速</strong></p>
+<blockquote>
+  <p>quay.azk8s.cn 只能内部使用了</p>
+</blockquote>
+<p><code>bash
+docker pull quay.azk8s.cn/coreos/kube-state-metrics:v1.7.2
+</code></p>
+<p>也可以使用脚本自动下载镜像</p>
+<p>```bash</p>
+<h1>下载gcr镜像</h1>
+<p>curl -sSL <a href="https://git.io/getgcr">https://git.io/getgcr</a> | bash -s gcr.io/google_containers/kube-apiserver:v1.16.3</p>
+<h1>下载k8s镜像</h1>
+<p>curl -sSL <a href="https://git.io/getgcr">https://git.io/getgcr</a> | bash -s k8s.gcr.io/pause-amd64:3.1</p>
+<h1>指定k8s版本，下载全套件</h1>
+<p>curl -sSL <a href="https://git.io/getgcr">https://git.io/getgcr</a> | bash -s - -t v1.16.3</p>
+<h1>下载quay.io镜像</h1>
+<p>curl -sSL <a href="https://git.io/getgcr">https://git.io/getgcr</a> | bash -s quay.io/coreos/kube-state-metrics:v1.7.2
+```</p>
+<p><strong>docker HTTP/HTTPS 代理</strong></p>
+<p>```bash
+mkdir /etc/systemd/system/docker.service.d/</p>
+<p>cat &lt;&lt; EOF &gt; /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment=&#34;HTTP_PROXY=http://127.0.0.1:8123/&#34;
+Environment=&#34;HTTPS_PROXY=https://127.0.0.1:8123/&#34;
+EOF</p>
+<p>systemctl daemon-reload
+systemctl restart docker
+```</p>
+<h2>containerd</h2>
+<p><strong>registry代理</strong></p>
+<p>生成默认配置
+<code>bash
+containerd config default &gt; /etc/containerd/config.toml
+</code></p>
+<p>将registry.mirrors替换成代理的
+<code>
+    [plugins.cri.registry]
+      [plugins.cri.registry.mirrors]
+        [plugins.cri.registry.mirrors.&#34;docker.io&#34;]
+          endpoint = [&#34;https://registry-1.docker.io&#34;]
+</code></p>
+<p><code>bash
+sed -i &#39;s#https://registry-1.docker.io#https://docker.mirrors.ustc.edu.cn#g&#39; /etc/containerd/config.toml
+</code></p>
+<p><strong>http代理</strong></p>
+<p>```</p>
+<h1>/usr/lib/systemd/system/containerd.service</h1>
+<p>[Unit]
+Description=containerd container runtime
+Documentation=https://containerd.io
+After=network.target</p>
+<p>[Service]
+ExecStartPre=-/sbin/modprobe overlay
+ExecStart=/usr/bin/containerd
+KillMode=process
+Delegate=yes
+LimitNOFILE=1048576</p>
+<h1>Having non-zero Limit*s causes performance problems due to accounting overhead</h1>
+<h1>in the kernel. We recommend using cgroups to do container-local accounting.</h1>
+<p>LimitNPROC=infinity
+LimitCORE=infinity
+TasksMax=infinity
+Environment=&#34;HTTP_PROXY=http://127.0.0.1:8123/&#34;</p>
+<p>[Install]
+WantedBy=multi-user.target
+```</p>
+<h2>podman</h2>
+<p>```bash
+cp /etc/containers/registries.conf{,.bak}
+cat &gt; /etc/containers/registries.conf &lt;&lt; EOF
+unqualified-search-registries = [&#34;docker.io&#34;]</p>
+<p>[[registry]]
+prefix = &#34;docker.io&#34;
+location = &#34;uyah70su.mirror.aliyuncs.com&#34;
+EOF
+```</p>
+<h2>kubernetes</h2>
+<p><strong>Debian / Ubuntu</strong></p>
+<p><code>bash
+apt-get update &amp;&amp; apt-get install -y apt-transport-https
+curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | apt-key add -
+cat &lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list
+deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
+EOF
+apt-get update
+apt-get install -y kubelet kubeadm kubectl
+</code></p>
+<p><strong>CentOS / RHEL / Fedora</strong></p>
+<p><code>bash
+cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF
+setenforce 0
+yum install -y kubelet kubeadm kubectl
+systemctl enable kubelet &amp;&amp; systemctl start kubelet
+</code></p>
+<h2>google-containers</h2>
+<p>gcr hub 代理</p>
+<p>```bash
+k8sgcr.lework.workers.dev ===&gt; k8s.gcr.io
+k8sgcr.lework.workers.dev/coredns:1.7.0 === k8s.gcr.io/coredns:1.7.0 </p>
+<p>gcr.lework.workers.dev ===&gt; gcr.io
+gcr.lework.workers.dev/google-containers/coredns:1.7.0 === gcr.io/google-containers/coredns:1.7.0 </p>
+<p>registry.aliyuncs.com/k8sxio ===&gt; k8s.gcr.io
+registry.aliyuncs.com/k8sxio/coredns:1.7.0 === k8s.gcr.io/coredns:1.7.0
+```</p>
+<h2>cygwin</h2>
+<p>选择 Install from Internet, 在”User URL”处输入以下地址：</p>
+<p><code>https://mirrors.tuna.tsinghua.edu.cn/cygwin/</code></p>
+<h2>maven</h2>
+<p>maven 的 <code>settings.xml</code></p>
+<p><code>xml
+&lt;mirrors&gt;
+&lt;mirror&gt;
+    &lt;id&gt;aliyunmaven&lt;/id&gt;
+    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+    &lt;name&gt;阿里云公共仓库&lt;/name&gt;
+    &lt;url&gt;https://maven.aliyun.com/repository/public&lt;/url&gt;
+&lt;/mirror&gt;
+&lt;/mirrors&gt;
+</code></p>
+<p>maven 项目的<code>pom.xml</code></p>
+<p><code>xml
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;nexus-163&lt;/id&gt;
+        &lt;name&gt;Nexus 163&lt;/name&gt;
+        &lt;url&gt;http://mirrors.163.com/maven/repository/maven-public/&lt;/url&gt;
+        &lt;layout&gt;default&lt;/layout&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/releases&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+&lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;nexus-163&lt;/id&gt;
+        &lt;name&gt;Nexus 163&lt;/name&gt;
+        &lt;url&gt;http://mirrors.163.com/maven/repository/maven-public/&lt;/url&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/releases&gt;
+    &lt;/pluginRepository&gt;
+&lt;/pluginRepositories&gt;
+</code></p>
+<h2>gradle</h2>
+<p><code>build.gradle</code> 文件</p>
+<p><code>
+allprojects {
+    repositories {
+        maven { url &#39;https://maven.aliyun.com/repository/public/&#39; }
+        mavenLocal()
+        mavenCentral()
+    }
+}
+</code></p>
+<h2>NuGet</h2>
+<p>选择工程-》NuGet 包管理器-》程序包管理器设置</p>
+<p><code>
+https://nuget.cdn.azure.cn/v3/index.json
+https://repo.huaweicloud.com/repository/nuget/v3/index.json
+</code></p>
+<h2>Hex</h2>
+<p><code>
+export HEX_MIRROR=&#34;https://hexpm.upyun.com&#34;
+export HEX_CDN=&#34;https://hexpm.upyun.com&#34;
+</code></p>
+<h2>github</h2>
+<blockquote>
+  <p>仅限访问和下载，请不要提交账号信息，需保护自己的隐私。</p>
+</blockquote>
+<p><code>
+https://ghp.quickso.cn  # 对github clone、release、archive以及项目文件进行加速
+</code></p>
+<p>Release、Code(ZIP) 文件加速：
+<code>
+https://gh.con.sh | 美国 01
+https://gh.api.99988866.xyz | 美国 02
+https://download.fastgit.org | 日本东京
+</code>
+Git Clone 加速：
+<code>
+https://hub.fastgit.org | 中国香港
+https://gitclone.com | 中国浙江杭州
+https://github.com.cnpmjs.org | 新加坡
+</code>
+Raw 文件加速：
+<code>
+https://gcore.jsdelivr.net | 中国国内
+https://raw.fastgit.org | 中国香港
+</code></p>
+<h2>前端开源项目 CDN</h2>
+<ul>
+<li><a href="https://cdn.quickso.cn/">https://cdn.quickso.cn/</a></li>
+<li><a href="https://www.jsdelivr.com/">https://www.jsdelivr.com/</a></li>
+<li><a href="https://www.bootcdn.cn/">https://www.bootcdn.cn/</a></li>
+<li><a href="https://cdnjs.com/">https://cdnjs.com/</a></li>
+<li><a href="http://www.staticfile.org/">http://www.staticfile.org/</a></li>
+<li><a href="http://jscdn.upai.com">http://jscdn.upai.com</a></li>
+<li><a href="https://cdn.baomitu.com/">https://cdn.baomitu.com/</a></li>
+<li><a href="https://cdnjs-jp.loli.net/">https://cdnjs-jp.loli.net/</a></li>
+<li><a href="http://cdn.bytedance.com/">http://cdn.bytedance.com/</a></li>
+<li><a href="https://unpkg.com/">https://unpkg.com/</a></li>
+</ul>
+</div>
+<script>
+    const previewElement = document.getElementById('preview')
+    Vditor.setContentTheme('light', 'https://unpkg.com/vditor@3.8.15/dist/css/content-theme');
+    Vditor.codeRender(previewElement);
+    Vditor.highlightRender({"enable":true,"lineNumber":false,"style":"github"}, previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.mathRender(previewElement, {
+        cdn: 'https://unpkg.com/vditor@3.8.15',
+        math: {"engine":"KaTeX","inlineDigit":false,"macros":{}},
+    });
+    Vditor.mermaidRender(previewElement, 'https://unpkg.com/vditor@3.8.15', 'classic');
+    Vditor.flowchartRender(previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.graphvizRender(previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.chartRender(previewElement, 'https://unpkg.com/vditor@3.8.15', 'classic');
+    Vditor.mindmapRender(previewElement, 'https://unpkg.com/vditor@3.8.15', 'classic');
+    Vditor.abcRender(previewElement, 'https://unpkg.com/vditor@3.8.15');
+    Vditor.mediaRender(previewElement);
+    Vditor.speechRender(previewElement);
+</script>
+<script src="https://unpkg.com/vditor@3.8.15/dist/js/icons/ant.js"></script></body></html>
