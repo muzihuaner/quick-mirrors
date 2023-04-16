@@ -1,0 +1,228 @@
+{
+  "sites": [
+    {
+      "name": "中国科学技术大学开源软件镜像",
+      "url": "https://mirrors.ustc.edu.cn",
+      "home": "https://lug.ustc.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "北京外国语大学开源软件镜像站",
+      "url": "https://mirrors.bfsu.edu.cn",
+      "home": "https://www.bfsu.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "清华大学开源软件镜像站",
+      "url": "https://mirrors.tuna.tsinghua.edu.cn",
+      "home": "https://tuna.moe",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "齐鲁工业大学开源软件镜像站",
+      "url": "https://mirrors.qlu.edu.cn",
+      "home": "#",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "南京大学开源镜像站",
+      "url": "https://mirror.nju.edu.cn",
+      "home": "https://sci.nju.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "重庆大学开源软件镜像站",
+      "url": "https://mirrors.cqu.edu.cn",
+      "home": "https://mirrors.cqu.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "SJTUG 思源镜像站",
+      "url": "https://mirror.sjtu.edu.cn",
+      "home": "https://mirror.sjtu.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "浙江大学开源软件镜像站",
+      "url": "https://mirrors.zju.edu.cn",
+      "home": "https://www.zjusct.io",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "哈尔滨工业大学开源镜像站",
+      "url": "https://mirrors.hit.edu.cn/",
+      "home": "https://mirrors.hit.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "山东大学镜像站",
+      "url": "https://mirrors.sdu.edu.cn",
+      "home": "https://mirrors.sdu.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "西安交通大学软件镜像站",
+      "url": "https://mirrors.xjtu.edu.cn",
+      "home": "https://xjtuana.com",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "北京交通大学自由与开源软件镜像站",
+      "url": "https://mirror.bjtu.edu.cn",
+      "home": "https://mirror.bjtu.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "大连东软信息学院开源镜像站",
+      "url": "http://mirrors.neusoft.edu.cn/",
+      "home": "https://www.neusoft.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "ISCAS 镜像站",
+      "url": "https://mirror.iscas.ac.cn",
+      "home": "https://isrc.iscas.ac.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "兰州大学开源社区镜像站",
+      "url": "https://mirror.lzu.edu.cn",
+      "home": "https://oss.lzu.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "南京邮电大学开源软件镜像站",
+      "url": "https://mirrors.njupt.edu.cn",
+      "home": "https://mirrors.njupt.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "西北农林科技大学镜像站",
+      "url": "https://mirrors.nwafu.edu.cn/",
+      "home": "https://mirrors.nwafu.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "南阳理工学院开源镜像站",
+      "url": "https://mirror.nyist.edu.cn/",
+      "home": "https://mirror.nyist.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "北京大学开源镜像站",
+      "url": "https://mirrors.pku.edu.cn",
+      "home": "https://mirrors.pku.edu.cn/Mirrors",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "上海科技大学 GeekPie 开源镜像站",
+      "url": "https://mirrors.shanghaitech.edu.cn",
+      "home": "https://mirrors.shanghaitech.edu.cn",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "电子科技大学镜像站",
+      "url": "http://mirrors.uestc.cn/",
+      "home": "https://uestclug.github.io/",
+      "status": "Online",
+      "tips": "目前仅限校内"
+    },
+    {
+      "name": "武昌首义学院开源软件镜像站",
+      "url": "https://mirrors.wsyu.edu.cn/",
+      "home": "https://mirrors.wsyu.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "北京邮电大学开源软件镜像站",
+      "url": "https://mirrors.bupt.edu.cn/",
+      "home": "https://mirrors.bupt.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "OpenTUNA开源软件镜像站",
+      "url": "https://opentuna.cn/",
+      "home": "https://opentuna.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "阿里巴巴开源镜像站",
+      "url": "https://developer.aliyun.com/mirror/",
+      "home": "#",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "腾讯软件源",
+      "url": "https://mirrors.cloud.tencent.com/",
+      "home": "https://mirrors.cloud.tencent.com/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "网易软件源",
+      "url": "http://mirrors.cn99.com/",
+      "home": "#",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "搜狐软件源",
+      "url": "http://mirrors.sohu.com/",
+      "home": "#",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "华为开源软件站",
+      "url": "https://mirrors.huaweicloud.com/",
+      "home": "#",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "东北大学镜像站",
+      "url": "http://mirror.neu.edu.cn/",
+      "home": "http://mirror.neu.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "首都在线科技股份有限公司",
+      "url": "http://mirrors.yun-idc.com/",
+      "home": "#",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "山东女子学院开源软件镜像站",
+      "url": "http://mirrors.sdwu.edu.cn/",
+      "home": "http://mirrors.sdwu.edu.cn/",
+      "status": "Online",
+      "tips": "无"
+    }
+  ]
+}

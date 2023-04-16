@@ -1,0 +1,67 @@
+{
+  "sites": [
+    {
+      "name": "jsdelivr",
+      "url": "https://cdn.jsdelivr.com/",
+      "home": "https://www.jsdelivr.com/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "BootCDN",
+      "url": "https://cdn.bootcdn.net/",
+      "home": "https://www.bootcdn.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "CDNJS",
+      "url": "https://cdnjs.cloudflare.com",
+      "home": "https://cdnjs.com/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "Staticfile CDN",
+      "url": "https://cdn.staticfile.org",
+      "home": "https://www.staticfile.org/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "又拍云CDN",
+      "url": "https://upcdn.b0.upaiyun.com/",
+      "home": "http://jscdn.upai.com/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "75CDN",
+      "url": "https://lib.baomitu.com",
+      "home": "https://cdn.baomitu.com/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "loli.net",
+      "url": "https://cdnjs-jp.loli.net/",
+      "home": "https://u.sb/css-cdn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "字节跳动静态资源公共库",
+      "url": "http://cdn.bytedance.com/",
+      "home": "http://cdn.bytedance.com/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "unpkg",
+      "url": "https://unpkg.com/",
+      "home": "https://unpkg.com/",
+      "status": "Online",
+      "tips": "无"
+    }
+  ]
+}
