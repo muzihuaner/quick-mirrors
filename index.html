@@ -7,7 +7,7 @@
     <meta property="og:description" content="快点软件镜像站">
     <meta property="description" content="快点软件镜像站">
     <link rel="stylesheet" href="static/style.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <script src="https://cdnjs.quickso.cn/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -33,13 +33,13 @@
 <!-- 导航栏结束 -->
 <div class="container">
     <div class="row">
-        <div class="col-md-10" >
+        <div class="col-md-10">
             <!-- 表格卡片 -->
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">镜像站列表</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Mirrors</h6>
-                    <table class="table" >
+                    <table class="table">
                         <thead>
                         <tr>
                             <th scope="col">名称</th>
@@ -126,10 +126,14 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <a href="https://mirrors.cernet.edu.cn/os"><button type="button" class="btn btn-success">获取安装镜像</button></a>
+                        <a href="https://mirrors.cernet.edu.cn/os">
+                            <button type="button" class="btn btn-success">获取安装镜像</button>
+                        </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="https://mirrors.cernet.edu.cn/app"><button type="button" class="btn btn-success">获取开源软件</button></a>
+                        <a href="https://mirrors.cernet.edu.cn/app">
+                            <button type="button" class="btn btn-success">获取开源软件</button>
+                        </a>
                     </li>
                     <li class="list-group-item"><a href="https://mirrors.ustc.edu.cn/help/">
                         <button type="button" class="btn btn-success">配置软件源</button>
@@ -156,7 +160,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="card"  id="about">
+            <div class="card" id="about">
                 <div class="card-header">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-cup-hot" viewBox="0 0 16 16">
@@ -166,12 +170,16 @@
                     </svg>
                     关于本站
                 </div>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush" style="text-align: center">
                     <p>
                         快点软件镜像站由欢哥科技建立，提供提供开源软件国内镜像信息服务，欢迎使用！
                     </p>
                     <p>联系方式:<br>
                         muzihuaner@hotmail.com</p>
+                    <div class="wx">
+                        <p>微信公众号</p>
+                        <p><img alt="感谢支持！" src="https://cdn.quickso.cn/img/wx.webp" width="100" height="100"></p>
+                    </div>
                 </ul>
             </div>
         </div>
