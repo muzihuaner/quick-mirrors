@@ -12,6 +12,7 @@ footer a {
 }
 
 footer {
+    margin-top: 20px;
     color: #fff !important;
 }
 
@@ -23,5 +24,5 @@ footer {
     width: 100%;
     margin-top: 20px;
     overflow-y: hidden;
-    margin-bottom: 20px;
+
 }
