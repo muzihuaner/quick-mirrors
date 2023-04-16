@@ -2,15 +2,26 @@ a {
     text-decoration: none;
     color: #000;
 }
+
 footer {
-    background-color: #343a40!important;
+    background-color: #343a40 !important;
 }
-footer a{
-    color: #fff!important;
+
+footer a {
+    color: #fff !important;
 }
-footer{
-    color: #fff!important;
+
+footer {
+    color: #fff !important;
 }
-#about p{
+
+#about p {
     padding: 5px;
+}
+
+.card {
+    width: 100%;
+    margin-top: 20px;
+    overflow-y: hidden;
+    margin-bottom: 20px;
 }
