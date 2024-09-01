@@ -1,35 +1,35 @@
 {
     "sites": [
        {
-            "name": "镜像0",
+            "name": "Docker镜像",
             "url": "https://docker.registry.cyou/",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
        {
-            "name": "镜像1",
+            "name": "镜像",
             "url": "https://docker-cf.registry.cyou/",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "zero_free 镜像服务",
+            "name": "Docker镜像",
             "url": "https://docker.jsdelivr.fyi",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "zero_free 镜像服务",
+            "name": "Docker镜像",
             "url": "https://dockercf.jsdelivr.fyi",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "zero_free 镜像服务",
+            "name": "Docker镜像",
             "url": "https://dockertest.jsdelivr.fyi",
             "home": "无",
             "status": "Online",
@@ -50,70 +50,70 @@
             "tips": "无"
         },
         {
-            "name": "Docker 镜像加速站",
+            "name": "Docker镜像",
             "url": "https://hub.uuuadc.top",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "Docker 镜像加速站",
+            "name": "Docker镜像",
             "url": "https://docker.1panel.live",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "DockerHub 镜像加速代理",
+            "name": "Docker镜像",
             "url": "https://docker.anyhub.us.kg",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "DockerHub 镜像加速代理",
+            "name": "Docker镜像",
             "url": "https://docker.chenby.cn",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "DockerHub 镜像加速代理",
+            "name": "Docker镜像",
             "url": "https://dockerhub.jobcher.com",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "镜像使用说明",
+            "name": "Docker镜像",
             "url": "https://dockerhub.icu",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "Docker 镜像加速站",
+            "name": "Docker镜像",
             "url": "https://docker.ckyl.me",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "镜像使用说明",
+            "name": "Docker镜像",
             "url": "https://docker.awsl9527.cn",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "镜像使用说明",
+            "name": "Docker镜像",
             "url": "https://docker.hpcloud.cloud",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "DaoCloud 镜像站",
+            "name": "Docker镜像",
             "url": "https://docker.m.daocloud.io",
             "home": "无",
             "status": "Online",
