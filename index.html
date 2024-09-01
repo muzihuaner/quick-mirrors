@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>快点软件镜像站</title>
-    <link rel="stylesheet" href="https://cdnjs.quickso.cn/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
     <meta property="og:description" content="快点软件镜像站">
     <meta property="description" content="快点软件镜像站">
     <link rel="stylesheet" href="static/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<!--网站统计-->
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"JjuLSWHDkNbve5CO",ck:"JjuLSWHDkNbve5CO"})</script>
-    <script src="https://cdnjs.quickso.cn/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <!-- 导航栏 开始 -->
@@ -999,6 +996,26 @@ LTA0LTE4VDA4OjQ1OjU2KzAwOjAwKbJbygAAAABJRU5ErkJggg=="/>
                     </table>
                 </div>
             </div>
+            <div class="card" style="width: 100%;margin-top: 20px">
+                <div class="card-body">
+                    <h5 class="card-title">Docker</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Mirrors</h6>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">名称</th>
+                            <th scope="col">网址</th>
+                            <th scope="col">主页</th>
+                            <th scope="col">状态</th>
+                            <th scope="col">说明</th>
+                        </tr>
+                        </thead>
+                        <tbody class="docker">
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
 
         </div>
 
@@ -1014,7 +1031,7 @@ LTA0LTE4VDA4OjQ1OjU2KzAwOjAwKbJbygAAAABJRU5ErkJggg=="/>
                     新闻通知
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">1.1版本上线啦！</li>
+                    <li class="list-group-item">1.2版本上线啦！增加了Docker镜像</li>
 
                 </ul>
             </div>
@@ -1081,8 +1098,10 @@ LTA0LTE4VDA4OjQ1OjU2KzAwOjAwKbJbygAAAABJRU5ErkJggg=="/>
                     <p>
                         快点软件镜像站由欢哥科技建立，提供提供开源软件国内镜像信息服务，欢迎使用！
                     </p>
-                    <p>联系方式:<br>
-                        muzihuaner@hotmail.com</p>
+                    <p>Github:
+                        <li class="list-group-item"><a href="https://github.com/muzihuaner/quick-mirrors/issues">提个issues</a>
+                    </li>
+</p>
                     <div class="wx">
                         <p>微信公众号</p>
                         <p><img alt="感谢支持！" src="https://tu.quickso.cn/file/9dd32e13a92d0ad3ca9e6.jpg" width="100" height="100">
@@ -1193,10 +1212,35 @@ LTA0LTE4VDA4OjQ1OjU2KzAwOjAwKbJbygAAAABJRU5ErkJggg=="/>
                 $(".list3").append(str);
             }
         });
+        $.ajax({
+            //请求方式
+            type: "GET",
+            //文件位置
+            url: "static/docker.json",
+            //返回数据格式为json,也可以是其他格式如
+            dataType: "json",
+            //请求成功后要执行的函数，拼接html
+            success: function (data) {
+                var str = '';
+                $.each(data, function (i, n) {
+                    for (k in n) {
+                        console.log(n[k])
+                        str += '<tr>';
+                        str += '<th scope="row">' + n[k].name + '</th>';
+                        str += '<td><a ' + 'href="' + n[k].url + '"' + '>' + n[k].url + '</a></td>'
+                        str += '<td><a ' + 'href="' + n[k].url + '"' + '>' + n[k].home + '</td>'
+                        str += '<td><span class="badge text-bg-success">' + n[k].status + '</span></td>'
+                        str += '<td>' + n[k].tips + '</td>'
+                        str += "</tr>";
+                    }
+                });
+                $(".docker").append(str);
+            }
+        });
     });
 
 </script>
 
-<script src="https://cdnjs.quickso.cn/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.loli.net/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
 </body>
 </html>  
