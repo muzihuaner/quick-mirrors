@@ -1,1 +1,130 @@
-
+{
+    "sites": [
+       {
+            "name": "镜像0",
+            "url": "https://docker.registry.cyou/",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+       {
+            "name": "镜像1",
+            "url": "https://docker-cf.registry.cyou/",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "zero_free 镜像服务",
+            "url": "https://docker.jsdelivr.fyi",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "zero_free 镜像服务",
+            "url": "https://dockercf.jsdelivr.fyi",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "zero_free 镜像服务",
+            "url": "https://dockertest.jsdelivr.fyi",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "docker proxy",
+            "url": "https://dockerpull.com",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "docker proxy",
+            "url": "https://dockerproxy.cn",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "Docker 镜像加速站",
+            "url": "https://hub.uuuadc.top",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "Docker 镜像加速站",
+            "url": "https://docker.1panel.live",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "DockerHub 镜像加速代理",
+            "url": "https://docker.anyhub.us.kg",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "DockerHub 镜像加速代理",
+            "url": "https://docker.chenby.cn",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "DockerHub 镜像加速代理",
+            "url": "https://dockerhub.jobcher.com",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "镜像使用说明",
+            "url": "https://dockerhub.icu",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "Docker 镜像加速站",
+            "url": "https://docker.ckyl.me",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "镜像使用说明",
+            "url": "https://docker.awsl9527.cn",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "镜像使用说明",
+            "url": "https://docker.hpcloud.cloud",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "DaoCloud 镜像站",
+            "url": "https://docker.m.daocloud.io",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "AtomHub 可信镜像仓库平台",
+            "url": "https://atomhub.openatom.cn",
+            "home": "无",
+            "status": "Online",
+            "tips": "只包含基础镜像，共 336 个"
+        }
+    ]
+}
