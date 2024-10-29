@@ -223,6 +223,13 @@
       "home": "http://mirrors.sdwu.edu.cn/",
       "status": "Online",
       "tips": "无"
+    },
+    {
+      "name": "火山引擎开源软件镜像站",
+      "url": "https://mirrors.volces.com/",
+      "home": "https://developer.volcengine.com/mirror",
+      "status": "Online",
+      "tips": "无"
     }
   ]
 }
