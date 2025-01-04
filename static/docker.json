@@ -1,5 +1,12 @@
 {
     "sites": [
+        {
+            "name": "Docker镜像",
+            "url": "https://docker.1ms.run",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
        {
             "name": "Docker镜像",
             "url": "https://docker.registry.cyou/",
@@ -72,7 +79,7 @@
         },
         {
             "name": "Docker镜像",
-            "url": "https://docker.chenby.cn",
+            "url": "https://dockerproxy.net",
             "home": "无",
             "status": "Online",
             "tips": "无"

@@ -62,6 +62,13 @@
       "home": "https://unpkg.com/",
       "status": "Online",
       "tips": "无"
+    },
+    {
+      "name": "jsdmirror",
+      "url": "https://cdn.jsdmirror.com/",
+      "home": "https://www.jsdmirror.com/",
+      "status": "Online",
+      "tips": "无"
     }
   ]
 }
