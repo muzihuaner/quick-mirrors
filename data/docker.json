@@ -1,14 +1,14 @@
 {
     "sites": [
         {
-            "name": "Docker镜像",
+            "name": "1ms镜像",
             "url": "https://docker.1ms.run",
             "home": "无",
             "status": "Online",
             "tips": "无"
         },
         {
-            "name": "Docker镜像",
+            "name": "DaoCloud镜像",
             "url": "https://docker.m.daocloud.io",
             "home": "无",
             "status": "Online",
