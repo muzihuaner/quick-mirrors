@@ -75,6 +75,18 @@
                 </div>
             </div>
             
+    <!-- Ad Banner -->
+    <div id="adBanner" class="max-w-7xl mx-auto px-4 pt-4 relative">
+        <button onclick="closeAdBanner()" class="absolute top-2 right-2 w-8 h-8 bg-gray-800/70 hover:bg-gray-900 rounded-full flex items-center justify-center text-white transition-colors duration-200 z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+        <a href="https://www.rainyun.com/Njg3MTg=_" target="_blank" class="block rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="static/banner1.png" alt="雨云广告" class="w-full h-auto">
+        </a>
+    </div>
+            
             <!-- Search Bar -->
             <div class="mt-8 max-w-2xl mx-auto">
                 <div class="relative">
@@ -521,9 +533,27 @@
             }, 2000);
         }
 
+        // Close ad banner
+        function closeAdBanner() {
+            const adBanner = document.getElementById('adBanner');
+            adBanner.style.display = 'none';
+            localStorage.setItem('adBannerClosed', 'true');
+        }
+
+        // Check if ad banner was closed
+        function checkAdBannerStatus() {
+            if (localStorage.getItem('adBannerClosed') === 'true') {
+                const adBanner = document.getElementById('adBanner');
+                if (adBanner) {
+                    adBanner.style.display = 'none';
+                }
+            }
+        }
+
         // Event listeners
         document.addEventListener('DOMContentLoaded', () => {
             loadData();
+            checkAdBannerStatus();
 
             // Search input
             const searchInput = document.getElementById('searchInput');
