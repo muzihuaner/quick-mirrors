@@ -1,0 +1,39 @@
+{
+    "sites": [
+        {
+            "name": "Docker镜像",
+            "url": "https://docker.1ms.run",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "Docker镜像",
+            "url": "https://docker.m.daocloud.io",
+            "home": "无",
+            "status": "Online",
+            "tips": "无"
+        },
+        {
+            "name": "渡渡鸟镜像同步站",
+            "url": "https://docker.aityp.com/",
+            "home": "https://docker.aityp.com/",
+            "status": "Online",
+            "tips": ""
+        },
+        {
+            "name": "1panel",
+            "url": "https://docker.1panel.live/",
+            "home": "https://docker.1panel.live/",
+            "status": "Online",
+            "tips": ""
+        },
+        {
+            "name": "轩辕镜像",
+            "url": "https://docker.xuanyuan.me/",
+            "home": "https://docker.xuanyuan.me/",
+            "status": "Online",
+            "tips": ""
+        }
+    ]
+}

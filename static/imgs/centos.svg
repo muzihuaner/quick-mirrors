@@ -1,0 +1,14 @@
+ <svg width="72" height="72" fill="none" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m30.818 33.599 2.3795 2.3655-2.3795 2.3655h-16.747v7.882l-10.213-10.248 10.213-10.075v7.7092l16.747 1e-4z" clip-rule="evenodd" fill="#932279" fill-rule="evenodd"></path>
+                                        <path d="m38.402 30.818-2.3656 2.3795-2.3655-2.3795v-16.748h-7.8819l10.247-10.213 10.075 10.213h-7.7092v16.748z" clip-rule="evenodd" fill="#EFA724" fill-rule="evenodd"></path>
+                                        <path d="m41.182 38.4-2.3794-2.3655 2.3794-2.3655h16.748v-7.882l10.213 10.248-10.213 10.075v-7.7092l-16.748-1e-4z" clip-rule="evenodd" fill="#262577" fill-rule="evenodd"></path>
+                                        <path d="m33.597 41.181 2.3656-2.3795 2.3655 2.3795v16.748h7.8819l-10.247 10.213-10.075-10.213h7.7092v-16.748z" clip-rule="evenodd" fill="#9CCD2A" fill-rule="evenodd"></path>
+                                        <path d="m13.471 13.472h20.349v20.349h-20.349v-20.349z" fill="#9CCD2A" stroke="#fff"></path>
+                                        <path d="m38.18 13.472h20.349v20.349h-20.349v-20.349z" fill="#932279" stroke="#fff"></path>
+                                        <path d="m38.18 38.185h20.349v20.349h-20.349v-20.349z" fill="#EFA724" stroke="#fff"></path>
+                                        <path d="m13.471 38.185h20.349v20.349h-20.349v-20.349z" fill="#262577" stroke="#fff"></path>
+                                        <path d="m4.1378 36 14.389-14.389 14.389 14.389-14.389 14.389-14.389-14.389z" stroke="#fff"></path>
+                                        <path d="M21.6109 18.5248L36 4.13565L50.389 18.5248L36 32.9139L21.6109 18.5248Z" stroke="#fff"></path>
+                                        <path d="m39.082 35.996 14.389-14.389 14.389 14.389-14.389 14.389-14.389-14.389z" stroke="#fff"></path>
+                                        <path d="m21.611 53.474 14.389-14.389 14.389 14.389-14.389 14.389-14.389-14.389z" stroke="#fff"></path>
+                                    </svg>

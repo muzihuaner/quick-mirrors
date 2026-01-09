@@ -69,6 +69,20 @@
       "home": "https://www.jsdmirror.com/",
       "status": "Online",
       "tips": "无"
+    },
+    {
+      "name": "onmicrosoft",
+      "url": "https://cdn.onmicrosoft.cn/",
+      "home": "https://cdn.onmicrosoft.cn/",
+      "status": "Online",
+      "tips": "无"
+    },
+    {
+      "name": "npmmirror",
+      "url": "https://npmmirror.com/",
+      "home": "https://npmmirror.com/",
+      "status": "Online",
+      "tips": "无"
     }
   ]
 }
